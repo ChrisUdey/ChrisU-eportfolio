@@ -6,28 +6,34 @@ router.get('/', function(req, res, next) {
   res.render('index',
       {
         title: 'Welcome to my e-portfolio',
-        aboutMe: "My name is Chris Udey I am 31 years old",
+        aboutMe: "My name is Chris Udey",
         picture: "/images/profile.jpg"
 
       });
 });
 
-router.get('/aboutMe', function(req, res, next) {
-    res.render('aboutMe', {
-        title: 'About Me - Chris Udey',
+router.get('/about', function(req, res, next) {
+    res.render('about', {
+        title: 'About Me',
     });
 });
 
 
 router.get('/projects', function(req, res) {
     res.render('projects', {
-        title: 'Projects - Chris Udey',
+        title: 'Projects',
     });
 });
 
 router.get('/skills', function(req, res) {
     res.render('skills', {
-        title: 'Skills - Chris Udey',
+        title: 'Skills',
     });
 });
+
+router.get('/contact', function(req, res) {
+    res.render('contact', {
+        title: 'Contact',
+    })
+})
 module.exports = router;
